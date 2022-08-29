@@ -17,6 +17,7 @@
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <otel.version>1.12.1</otel.version>
         <docker-registry.username>username</docker-registry.username>
         <docker-registry.password>password</docker-registry.password>
         <docker-registry.url>url</docker-registry.url>
@@ -36,6 +37,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.opentelemetry.javaagent</groupId>
+            <artifactId>opentelemetry-javaagent</artifactId>
+            <version>${otel.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
